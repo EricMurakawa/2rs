@@ -1,9 +1,64 @@
+$color-1 : #0725d3;
+
+.search{
+    position: relative;
+}
+.search button{
+    position: absolute;   
+    top: 0; 
+    right: 0;
+    border-radius: 25px;
+}
+.search input{
+    width: 500px;
+    border-radius: 25px;
+}
+
+.arrow{
+    width: 20px;
+    height: 20px;
+}
+.arrow :hover{
+    display: none;
+}
+
+.arrow2{
+    display: none;
+}
+.arrow2 :hover{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.link-dropdown{
+    text-decoration: none;
+}
+
+.div-dropdown :hover{
+    background-color: white !important;
+    color: $color-1 !important;
+}
+
+@media screen and (max-width:992px) {
+    .search input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .search input{
+        display: none;
+    }
+    .search button{
+        display: none;
+    }
+    .text-cadastro{
+        display: none;
+    }
+    .loupe{
+        display: block !important;
+    }
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";  
-
-// Create your own map
-$custom-colors: (
-  "color-1": rgb(0, 10, 153)
-);
-
-// Merge the maps
-$theme-colors: map-merge($theme-colors, $custom-colors);
