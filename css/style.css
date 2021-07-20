@@ -1,3 +1,15 @@
+.bg-1 {
+  background-color: #22284b !important;
+}
+
+.bg-2 {
+  background-color: #e74817 !important;
+}
+
+.bg-3 {
+  background-color: #2c50a6 !important;
+}
+
 .search {
   position: relative;
 }
@@ -28,9 +40,9 @@
 }
 
 .arrow2 :hover {
+  display: block !important;
   width: 20px;
   height: 20px;
-  display: block;
 }
 
 .link-dropdown {
@@ -39,7 +51,7 @@
 
 .div-dropdown :hover {
   background-color: white !important;
-  color: #0725d3 !important;
+  color: #2c50a6 !important;
 }
 
 @media screen and (max-width: 992px) {
