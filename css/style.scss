@@ -32,24 +32,24 @@ $color-3: #2c50a6;
     width: 20px;
     height: 20px;
 }
-.arrow :hover{
+.arrow :active{
     display: none;
 }
 
 .arrow2{
     display: none;
-}
-.arrow2 :hover{
-    display: block !important;
     width: 20px;
     height: 20px;
+}
+.arrow2 :active{
+    display: block !important;
 }
 
 .link-dropdown{
     text-decoration: none;
 }
 
-.div-dropdown :hover{
+.div-dropdown :active{
     background-color: white !important;
     color: #2c50a6 !important;
 }
