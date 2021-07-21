@@ -32,7 +32,7 @@ $color-3: #2c50a6;
     width: 20px;
     height: 20px;
 }
-.arrow :active{
+.arrow :hover{
     display: none;
 }
 
@@ -45,13 +45,30 @@ $color-3: #2c50a6;
     display: block !important;
 }
 
-.link-dropdown{
-    text-decoration: none;
+.btn-check:focus + .btn-drop, .btn-drop:focus {
+    color: $color-3 !important;
+    background-color: white !important;
+    border-color: #234085;
+    border: none !important;
+}
+.btn-drop{
+    width: 100% !important;
+    border-radius: 0 !important;
 }
 
-.div-dropdown :active{
-    background-color: white !important;
-    color: #2c50a6 !important;
+.dropdown-ul{
+    width: 100% !important;
+    border-radius: 0 !important;
+}
+
+.dropdown-content :hover{
+    display: block !important;
+}
+.dropdown-content{
+    display: block;
+    position: relative;
+    left: 95%;
+    bottom: 2.5rem;
 }
 
 @media screen and (max-width:992px) {

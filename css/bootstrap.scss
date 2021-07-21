@@ -1,1 +1,11 @@
+$color-1: #22284b;
+$color-2: #e74817;
+$color-3: #2c50a6;
+
+$theme-colors: (
+  "color-1":    $color-1,
+  "color-2":    $color-2,
+  "color-3":    $color-3
+);
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

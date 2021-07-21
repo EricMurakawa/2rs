@@ -31,7 +31,7 @@
   height: 20px;
 }
 
-.arrow :active {
+.arrow :hover {
   display: none;
 }
 
@@ -45,13 +45,32 @@
   display: block !important;
 }
 
-.link-dropdown {
-  text-decoration: none;
+.btn-check:focus + .btn-drop, .btn-drop:focus {
+  color: #2c50a6 !important;
+  background-color: white !important;
+  border-color: #234085;
+  border: none !important;
 }
 
-.div-dropdown :active {
-  background-color: white !important;
-  color: #2c50a6 !important;
+.btn-drop {
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+
+.dropdown-ul {
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+
+.dropdown-content :hover {
+  display: block !important;
+}
+
+.dropdown-content {
+  display: block;
+  position: relative;
+  left: 95%;
+  bottom: 2.5rem;
 }
 
 @media screen and (max-width: 992px) {
