@@ -10,23 +10,6 @@
   background-color: #2c50a6 !important;
 }
 
-.search {
-  position: relative;
-}
-
-.search button {
-  background: #e74817;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 25px;
-}
-
-.search input {
-  width: 500px;
-  border-radius: 25px;
-}
-
 .arrow {
   width: 20px;
   height: 20px;
@@ -59,6 +42,23 @@
 }
 
 /* ============ Search ============ */
+.search {
+  position: relative;
+}
+
+.search button {
+  background: #e74817;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 25px;
+}
+
+.search input {
+  width: 500px;
+  border-radius: 25px;
+}
+
 @media screen and (max-width: 992px) {
   .search input {
     display: none;
@@ -127,4 +127,11 @@
 }
 
 /* ============ small devices .end// ============ */
+/* ============= Banner =============*/
+.banner-img {
+  width: 100%;
+  height: auto;
+}
+
+/* ============= Banner .end =============*/
 /*# sourceMappingURL=style.css.map */
