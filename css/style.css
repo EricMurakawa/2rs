@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .bg-1 {
   background-color: #22284b !important;
 }
@@ -74,6 +75,38 @@
   }
 }
 
+.search-offcanva {
+  position: relative;
+}
+
+.search-offcanva button {
+  background: #e74817;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 25px;
+}
+
+.search-offcanva input {
+  width: 100%;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 992px) {
+  .search-offcanva input {
+    display: block;
+  }
+  .search-offcanva button {
+    display: block;
+  }
+  .text-cadastro {
+    display: block;
+  }
+  .loupe {
+    display: block !important;
+  }
+}
+
 /* ============ Search end ============ */
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
@@ -113,16 +146,8 @@
 /* ============ desktop view .end// ============ */
 /* ============ small devices ============ */
 @media (max-width: 991px) {
-  .dropdown-menu .dropdown-menu {
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
-    margin-bottom: .5rem;
-  }
-  .drop-nav {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
+  .navbar-dropdown {
+    display: none !important;
   }
 }
 
@@ -134,4 +159,35 @@
 }
 
 /* ============= Banner .end =============*/
+/*============== Card ================*/
+.btn-card {
+  background-color: #ced4da !important;
+  color: white !important;
+  border-radius: 25px !important;
+  font-size: 0.8rem !important;
+}
+
+.btn-card:hover {
+  background-color: #22284b !important;
+}
+
+.btn-card img {
+  display: inline-block;
+}
+
+.slick-next:before {
+  content: '→';
+  color: #e74817;
+  right: 15px !important;
+  position: relative;
+}
+
+.slick-prev:before {
+  content: '←';
+  color: #e74817;
+  left: 15px !important;
+  position: relative;
+}
+
+/*============== Card .end ================*/
 /*# sourceMappingURL=style.css.map */

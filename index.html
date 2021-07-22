@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <!-- Bootstrap CSS -->
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/bootstrap.css" rel="stylesheet">
@@ -28,7 +31,6 @@
             aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand ms-2 me-auto" href="#">Navbar</a>
           <form class="mx-auto">
             <div class="d-flex search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -48,15 +50,37 @@
           </div>
       
           <a href=""><img src="./icons/shopping-cart.png" alt=""></a>
-          <a href=""><img class="loupe ms-3" src="./icons/loupe.png" alt=""
-              style="display: none; width: 28px; height: 28px;"></a>
+
+          <!--Off Canva-->
+          <button class="btn ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop"><img class="loupe" src="./icons/loupe.png" alt=""
+            style="display: none; width: 28px; height: 28px;"></button>
+
+          <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasTopLabel">Search</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <form class="mx-auto">
+                  <div class="d-flex search-offcanva">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit"><img src="./icons/loupe.png" alt="" width="20"
+                        height="20"></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!--Off Canva End-->
       
         </div>
       </nav>
     </section>
 
     <!-- navbar dropdows -->
-    <section class="bg-3 d-md-block d-none">
+    <section class="bg-3 navbar-dropdown">
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-0">
         <div class="container-fluid p-0">
           <div class="w-100">
@@ -405,49 +429,346 @@
       </div>
     </section>
 
-    <!--Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // make it as accordion for smaller screens
-        if (window.innerWidth < 992) {
+    <!--Msg-->
+    <section>
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6 col-sm-12">
+            <h3 class="text-color-2 text-center">Um ótimo dia começa com a noite de sono perfeita!</h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          // close all inner dropdowns when parent is closed
-          document.querySelectorAll('.navbar .dropdown').forEach(function (everydropdown) {
-            everydropdown.addEventListener('hidden.bs.dropdown', function () {
-              // after dropdown is hidden, then find all submenus
-              this.querySelectorAll('.submenu').forEach(function (everysubmenu) {
-                // hide every submenu as well
-                everysubmenu.style.display = 'none';
-              });
-            })
-          });
+    <!--Produtos-->
+    <section>
+      <div class="container">
 
-          document.querySelectorAll('.dropdown-menu a').forEach(function (element) {
-            element.addEventListener('click', function (e) {
-              let nextEl = this.nextElementSibling;
-              if (nextEl && nextEl.classList.contains('submenu')) {
-                // prevent opening link if link needs to open dropdown
-                e.preventDefault();
-                if (nextEl.style.display == 'block') {
-                  nextEl.style.display = 'none';
-                } else {
-                  nextEl.style.display = 'block';
-                }
+        <!--Row 1-->
+        <div class="row">
 
-              }
-            });
-          })
-        }
-        // end if innerWidth
-      });
-    // DOMContentLoaded  end
-    </script>
+          <!--Single card-->
+          <div class="col-md-3 col-sm-12 my-auto">
+            <div>
+              <div class="card h-100">
+                <img src="./img/cama-1.jpeg" class="card-img-top" alt="...">
+                <div class="card-footer text-center bg-color-1 py-4">
+                  <h5 class="card-title text-uppercase text-white fs-6">Cama box</h5>
+                  <a class="stretched-link text-decoration-none" href="item.html"><small class="text-color-2">Ver todos
+                      &raquo;</small></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          <!--Caroussel-->
+          <div class="col-md-9 col-sm-12">
+            <div class="carousel">
+              
+              <!--card 1-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/card-1.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Casal V-Joy Conjugada 50cm de Altura - Benfica</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+              
+              <!--card 2-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/card-2.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Casal V-Joy Conjugada 50cm de Altura - Benfica</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 3-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/card-3.jpeg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Casal V-Joy Conjugada 50cm de Altura - Benfica</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 4-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/card-4.jpeg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Casal V-Joy Conjugada 50cm de Altura - Benfica</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 5-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/card-5.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Casal V-Joy Conjugada 50cm de Altura - Benfica</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+
+        </div>
+
+        <!--Row 2-->
+        <div class="row">
+
+          <!--Single card-->
+          <div class="col-md-3 col-sm-12 my-auto">
+            <div>
+              <div class="card h-100">
+                <img src="./img/bau.jpg" class="card-img-top" alt="...">
+                <div class="card-footer text-center bg-color-1 py-4">
+                  <h5 class="card-title text-uppercase text-white fs-6">Cama box baú</h5>
+                  <a class="stretched-link text-decoration-none" href="item.html"><small class="text-color-2">Ver todos
+                      &raquo;</small></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Caroussel-->
+          <div class="col-md-9 col-sm-12">
+            <div class="carousel">
+              
+              <!--card 1-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/bau-1.jpeg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Baú Casal Bipartida - Corino Bege - 1,38 x 1,88 x 0,44 - V-joy</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+              
+              <!--card 2-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/bau-2.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Baú Casal Bipartida - Corino Bege - 1,38 x 1,88 x 0,44 - V-joy</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 3-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/bau-3.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Baú Casal Bipartida - Corino Bege - 1,38 x 1,88 x 0,44 - V-joy</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 4-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/bau-4.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Baú Casal Bipartida - Corino Bege - 1,38 x 1,88 x 0,44 - V-joy</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 5-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/bau-5.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">Cama Box Baú Casal Bipartida - Corino Bege - 1,38 x 1,88 x 0,44 - V-joy</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+
+        </div>
+
+        <!--Row 3-->
+        <div class="row">
+
+          <!--Single card-->
+          <div class="col-md-3 col-sm-12 my-auto">
+            <div>
+              <div class="card h-100">
+                <img src="./img/cabe.jpeg" class="card-img-top" alt="...">
+                <div class="card-footer text-center bg-color-1 py-4">
+                  <h5 class="card-title text-uppercase text-white fs-6">Cabeceiras</h5>
+                  <a class="stretched-link text-decoration-none" href="item.html"><small class="text-color-2">Ver todos
+                      &raquo;</small></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Caroussel-->
+          <div class="col-md-9 col-sm-12">
+            <div class="carousel">
+              
+              <!--card 1-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/cabe-1.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">CABECEIRA CAMA BOX PARIS SOLTEIRO 88 SUEDE LISO MARROM HADASSAH</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+              
+              <!--card 2-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/cabe-2.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">CABECEIRA CAMA BOX PARIS SOLTEIRO 88 SUEDE LISO MARROM HADASSAH</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 3-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/cabe-3.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">CABECEIRA CAMA BOX PARIS SOLTEIRO 88 SUEDE LISO MARROM HADASSAH</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 4-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/cabe-4.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">CABECEIRA CAMA BOX PARIS SOLTEIRO 88 SUEDE LISO MARROM HADASSAH</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+
+              <!--card 5-->
+              <div class="p-2">
+                <div class="card h-100 p-3">
+                  <img src="./img/cabe-5.jpg" class="card-img-top" alt="...">
+                  <p class="card-text text-center text-muted lh-1">CABECEIRA CAMA BOX PARIS SOLTEIRO 88 SUEDE LISO MARROM HADASSAH</p>
+                  <p class="card-text text-wrap text-center m-0 text-muted"><small><del>R$2199,00</del></small></p>
+                  <p class="card-text text-wrap text-center m-0 fw-bold text-color-3"><small>Por: R$2125,00 (boleto)</small></p>
+                  <p class="card-text text-wrap text-center m-0">ou 12x R$186,02</p>
+                  <a class="btn btn-card mt-2 w-100" href="item.html"><img class="me-1" width="20px" src="./icons/shopping-cart.png"
+                      alt=""> Adicionar ao carrinho</a>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
     
-    <!-- <script src="./node_modules/bootstrap/js/src/popover.js"></script> -->
-    <!-- <script src="./node_modules/bootstrap/js/src/popover.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <br><br><br><br>
+
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!--Slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!--Main-->
+    <script>
+      $('.carousel').slick({
+          arrows:true,
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+    </script>
 
   </body>
 </html>
