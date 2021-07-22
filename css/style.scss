@@ -76,7 +76,10 @@ $color-3: #2c50a6;
 
 //Mega Menu
 /* ============ desktop view ============ */
-@media all and (min-width: 800px) {
+@media all and (min-width: 992px) {
+    .dropdown-menu{
+        width: 100% !important;
+    }
 	.dropdown-menu li{ position: relative; 	}
 	.nav-item .submenu{ 
 		display: none;
@@ -85,10 +88,17 @@ $color-3: #2c50a6;
         top:-20px;
 	}
 	.nav-item .submenu-left{ 
-		right:100%; left:auto;
+		right:100% !important; left:auto;
 	}
+    .nav-item .submenu-last{
+        display: none;
+		position: absolute;
+		left:-100% !important; 
+        top:-20px;
+    }
 	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
 	.dropdown-menu > li:hover > .submenu{ display: block; }
+    .dropdown-menu > li:hover > .submenu-last{ display: block; }
 }	
 /* ============ desktop view .end// ============ */
 
@@ -99,13 +109,6 @@ $color-3: #2c50a6;
     }
     .drop-nav{
         flex-direction: row !important;
-    }
-    .navbar-expand-lg {
-        -ms-flex-wrap: wrap !important;
-        flex-wrap: nowrap !important;
-        -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-        justify-content: flex-start !important;
     }
 }	
 /* ============ small devices .end// ============ */
