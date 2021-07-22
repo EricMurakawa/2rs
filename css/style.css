@@ -15,6 +15,7 @@
 }
 
 .search button {
+  background: #e74817;
   position: absolute;
   top: 0;
   right: 0;
@@ -45,7 +46,7 @@
   display: block !important;
 }
 
-.btn-check:focus + .btn-drop, .btn-drop:focus {
+.btn-check:focus + .btn-drop, .btn-drop:focus, .btn-drop:hover {
   color: #2c50a6 !important;
   background-color: white !important;
   border-color: #234085;
@@ -57,29 +58,8 @@
   border-radius: 0 !important;
 }
 
-.dropdown-ul {
-  width: 100% !important;
-  border-radius: 0 !important;
-}
-
-.dropdown-content :hover {
-  display: block !important;
-}
-
-.dropdown-content {
-  display: block;
-  position: relative;
-  left: 95%;
-  bottom: 2.5rem;
-}
-
+/* ============ Search ============ */
 @media screen and (max-width: 992px) {
-  .search input {
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 768px) {
   .search input {
     display: none;
   }
@@ -93,4 +73,53 @@
     display: block !important;
   }
 }
+
+/* ============ Search end ============ */
+/* ============ desktop view ============ */
+@media all and (min-width: 800px) {
+  .dropdown-menu li {
+    position: relative;
+  }
+  .nav-item .submenu {
+    display: none;
+    position: absolute;
+    left: 100% !important;
+    top: -20px;
+  }
+  .nav-item .submenu-left {
+    right: 100%;
+    left: auto;
+  }
+  .dropdown-menu > li:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown-menu > li:hover > .submenu {
+    display: block;
+  }
+}
+
+/* ============ desktop view .end// ============ */
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+  .dropdown-menu .dropdown-menu {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-bottom: .5rem;
+  }
+  .drop-nav {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .navbar-expand-lg {
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
+    -webkit-box-pack: start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* ============ small devices .end// ============ */
 /*# sourceMappingURL=style.css.map */
