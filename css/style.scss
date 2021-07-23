@@ -172,3 +172,31 @@ $color-3: #2c50a6;
     position: relative;
 }
 /*============== Card .end ================*/
+
+.form-oft input{
+    height: 45px !important;
+    border-radius: 25px;
+}
+.form-oft label{
+    height: 45px !important;
+    padding-top: 0.6rem !important;
+    margin-left: 0.8rem !important;
+    
+}
+.btn-oft{
+    border-radius: 25px !important;
+}
+
+/*===========Scrollbar==========*/
+body::-webkit-scrollbar {
+    width: 10px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #ced4da;       
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #7d8083;    
+    border-radius: 20px;       
+  }
