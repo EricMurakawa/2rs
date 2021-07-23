@@ -11,6 +11,10 @@
   background-color: #2c50a6 !important;
 }
 
+.btn-transparent {
+  background-color: transparent !important;
+}
+
 .arrow {
   width: 20px;
   height: 20px;
@@ -207,7 +211,7 @@
 
 /*===========Scrollbar==========*/
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 body::-webkit-scrollbar-track {
@@ -218,4 +222,32 @@ body::-webkit-scrollbar-thumb {
   background-color: #7d8083;
   border-radius: 20px;
 }
+
+/*===========Scrollbar End==========*/
+/*===========galery img==========*/
+.img-box {
+  position: relative;
+}
+
+.img-thumb {
+  width: 100% !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
+.img-box-small {
+  position: absolute;
+  top: 63%;
+  left: 0;
+}
+
+.img-small {
+  max-width: 90px !important;
+}
+
+.active {
+  border: 1px solid #e74817 !important;
+}
+
+/*===========galery img==========*/
 /*# sourceMappingURL=style.css.map */
