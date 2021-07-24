@@ -227,3 +227,16 @@ body::-webkit-scrollbar {
     border: 1px solid #e74817 !important;
 }
 /*===========galery img==========*/
+
+.btn-collapse{
+    background-color: #ced4da !important;
+    color: #797b7c !important;
+}
+.btn-collapse:hover{
+    background-color: $color-3 !important;
+    color: white !important;
+}
+.btn-active{
+    background-color: $color-3 !important;
+    color: white !important;
+}

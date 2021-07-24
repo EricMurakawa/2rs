@@ -250,4 +250,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*===========galery img==========*/
+.btn-collapse {
+  background-color: #ced4da !important;
+  color: #797b7c !important;
+}
+
+.btn-collapse:hover {
+  background-color: #2c50a6 !important;
+  color: white !important;
+}
+
+.btn-active {
+  background-color: #2c50a6 !important;
+  color: white !important;
+}
 /*# sourceMappingURL=style.css.map */
